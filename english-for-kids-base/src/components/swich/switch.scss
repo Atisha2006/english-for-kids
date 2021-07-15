@@ -1,0 +1,80 @@
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 36px;
+  top: 30px;
+  right: 3px;
+  z-index: 10;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #cccc00 15%, #009f2a);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 36px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.checkbox-switch:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  border: 1px solid #007241;
+  z-index: 2;
+}
+
+.checkbox-switch:after {
+  position: absolute;
+  content: 'Train';
+  top: 0;
+  right: 10px;
+  height: 36px;
+  width: 50px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: -1px 0 1px #069235, 1px 0px 1px #069235, 0px 1px 1px #069235, 0px -1px 1px #069235;
+  text-transform: uppercase;
+}
+
+input:checked + .checkbox-switch {
+  background: linear-gradient(-90deg, #cccc00 15%, #009f2a);
+}
+input:checked + .checkbox-switch:after {
+  content: 'Play';
+  left: 20px;
+  height: 36px;
+}
+input:focus + .checkbox-switch {
+  box-shadow: 0 0 1px #007241;
+}
+
+input:checked + .checkbox-switch:before {
+  -webkit-transform: translateX(64px);
+  -ms-transform: translateX(464px);
+  transform: translateX(64px);
+}

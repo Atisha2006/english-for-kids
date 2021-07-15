@@ -1,0 +1,168 @@
+.statistic__list {
+  counter-reset: chapter-count 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: auto;
+  padding-top: 80px;
+  margin-top: -30px;
+}
+
+.statistic-feild {
+  min-width: 650px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #069235;
+  text-align: center;
+  padding: 8px 0;
+  &:hover {
+    background: linear-gradient(217deg, rgba(255, 251, 5, 0.3), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(1, 141, 1, 0.3), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgb(248, 132, 0, 0.3), rgba(0, 0, 255, 0) 70.71%);
+  }
+  &:before {
+    position: absolute;
+    counter-increment: chapter-count;
+    content: counter(chapter-count);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 20px;
+    color: #069235;
+  }
+}
+
+.statistic-feild div {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #069235;
+}
+@media (min-width: 1000px) {
+  .statistic-feild div {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.statistic-feild_header {
+  padding: 10px 0;
+  background: linear-gradient(217deg, rgba(255, 251, 5), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(1, 141, 1), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgb(248, 132, 0), rgba(0, 0, 255, 0) 70.71%);
+  &:hover {
+    background: linear-gradient(217deg, rgba(255, 251, 5), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(1, 141, 1), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgb(248, 132, 0), rgba(0, 0, 255, 0) 70.71%);
+  }
+  &:before {
+    counter-increment: chapter-count 0;
+    content: '';
+  }
+  & div {
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    padding-left: 16px;
+    text-shadow: -1px 0 1px #069235, 1px 0px 1px #069235, 0px 1px 1px #069235, 0px -1px 1px #069235;
+    white-space: nowrap;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      font-size: 18px;
+      font-weight: 900;
+      text-align: center;
+      color: yellow;
+    }
+    &.asc:after {
+      content: '↑';
+    }
+    &.desc:after {
+      content: '↓';
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .statistic-feild_header div {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.statistic__number {
+  flex: 0 0 40px;
+}
+.statistic__category {
+  flex: 1 0 100px;
+}
+.statistic__word {
+  flex: 1 0 60px;
+}
+.statistic__translation {
+  flex: 1 0 100px;
+}
+.statistic__trainClick {
+  flex: 1 0 50px;
+}
+.statistic__playCorrect {
+  flex: 1 0 50px;
+}
+.statistic__playError {
+  flex: 1 0 50px;
+}
+.statistic__percent {
+  flex: 1 0 50px;
+}
+
+.btn_statistic,
+.btn_difficult {
+  position: absolute;
+  top: 5px;
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  text-shadow: -1px 0 1px #069235, 1px 0px 1px #069235, 0px 1px 1px #069235, 0px -1px 1px #069235;
+  background: linear-gradient(217deg, rgba(255, 251, 5), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(1, 141, 1), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgb(248, 132, 0), rgba(0, 0, 255, 0) 70.71%);
+}
+.btn_statistic {
+  top: 5px;
+  right: 5px;
+}
+.btn_difficult {
+  right: 5px;
+  top: 40px;
+}
+
+@media (min-width: 460px) {
+  .btn_statistic,
+  .btn_difficult {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+  .btn_statistic {
+    top: 5px;
+    left: 5px;
+  }
+  .btn_difficult {
+    top: 5px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .btn_statistic,
+  .btn_difficult {
+    width: 260px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+  }
+}

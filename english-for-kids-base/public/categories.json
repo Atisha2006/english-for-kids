@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Actions (set A)",
+    "image": "images/draw.jpg",
+    "icon": "icons/action_a.svg"
+  },
+  {
+    "id": 2,
+    "name": "Actions (set B)",
+    "image": "images/swim.jpg",
+    "icon": "icons/action_b.svg"
+  },
+  {
+    "id": 3,
+    "name": "Animals (set A)",
+    "image": "images/dog.jpg",
+    "icon": "icons/animals_a.svg"
+  },
+  {
+    "id": 4,
+    "name": "Animals (set B)",
+    "image": "images/lion.jpg",
+    "icon": "icons/animals_b.svg"
+  },
+  {
+    "id": 5,
+    "name": "Clothes",
+    "image": "images/dress.jpg",
+    "icon": "icons/clothes.svg"
+  },
+  {
+    "id": 6,
+    "name": "Emotions",
+    "image": "images/smile.jpg",
+    "icon": "icons/emotions.svg"
+  },
+  {
+    "id": 7,
+    "name": "Birds",
+    "image": "images/parrot.jpg",
+    "icon": "icons/birds.svg"
+  },
+  {
+    "id": 8,
+    "name": "Dishes",
+    "image": "images/cup.jpg",
+    "icon": "icons/dishes.svg"
+  }
+]

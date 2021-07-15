@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" width="40px" height="40px" viewBox="0 -256 1792 1792" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <linearGradient id="linearGradient2875" x2="1536" y1="640" y2="640" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#e0e100" offset="0"/>
+  </linearGradient>
+ </defs>
+ <g transform="matrix(1 0 0 -1 112.12 1284.8)" fill="url(#linearGradient2875)" stroke="#d66900" stroke-width="7.9">
+  <path d="m1536 1280v-448q0-26-19-45t-45-19h-448q-42 0-59 40-17 39 14 69l138 138q-148 137-349 137-104 0-198.5-40.5t-163.5-109.5-109.5-163.5-40.5-198.5 40.5-198.5 109.5-163.5 163.5-109.5 198.5-40.5q169 0 304 99.5t185 261.5q7 23 30 23h199q16 0 25-12 10-13 7-27-39-175-147.5-312t-266-213-336.5-76q-156 0-298 61t-245 164-164 245-61 298 61 298 164 245 245 164 298 61q147 0 284.5-55.5t244.5-156.5l130 129q29 31 70 14 39-17 39-59z" fill="#069235" fill-opacity=".72908" stroke="#d6d800" stroke-width="7.9"/>
+ </g>
+</svg>

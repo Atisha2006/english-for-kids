@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.popup__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px;
+  height: 220px;
+  z-index: 10;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.4em;
+  font-weight: 500;
+  color: yellow;
+  text-shadow: -2px 0 2px #000, 2px 0px 2px #000, 0 2px 2px #000, 0 -2px 2px #000, 0px 0px 30px rgba(255, 255, 0, 1);
+  background-image: url('/public/icons/failure.svg');
+  background-position: 50% 60px;
+  background-size: auto 160px;
+  background-repeat: no-repeat;
+  &.win {
+    background-image: url('/public/icons/success.svg');
+  }
+}
+
+@media (min-width: 640px) {
+  .popup__inner {
+    width: 450px;
+  }
+}

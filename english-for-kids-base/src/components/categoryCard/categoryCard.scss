@@ -1,0 +1,109 @@
+.categories__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  min-height: 1px;
+  width: 100%;
+  max-width: 280px;
+  margin: 15px 0;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background: linear-gradient(217deg, rgba(255, 251, 5, 0.8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(1, 141, 1, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgb(238, 148, 14), rgba(0, 0, 255, 0) 70.71%);
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 85%;
+  }
+  &:hover:before {
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  &:hover .card__desc {
+    text-shadow: 0px 2px 2px #069235, 0px -2px 2px #069235, 2px 0px 2px #069235, -2px 0px 2px #069235;
+  }
+}
+
+@media (min-width: 640px) {
+  .card {
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    width: 48%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .card {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    width: 30%;
+  }
+}
+@media (min-width: 1300px) {
+  .card {
+    -ms-flex: 0 0 22%;
+    flex: 0 0 22%;
+    width: 22%;
+    margin: 30px 0;
+  }
+}
+
+.card__img {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__img-wrap {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.card__desc {
+  display: block;
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+  text-shadow: -1px 0 1px #069235, 1px 0px 1px #069235, 0px 1px 1px #069235, 0px -1px 1px #069235;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  text-transform: uppercase;
+  background: linear-gradient(-120deg, #cccc00 25%, #009f2a);
+}

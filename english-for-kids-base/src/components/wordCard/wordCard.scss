@@ -1,0 +1,151 @@
+.word__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-around;
+  & h2{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    line-height: 1em;
+    color: #069235;
+    padding-bottom: 60px;
+  }
+}
+
+.word__list {
+  .card__rotate {
+    display: block;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-image: url('/public/icons/rotate.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.7s;
+    &:hover {
+      transform: scale(1.2) rotate(90deg);
+    }
+  }
+}
+.word-card {
+  transform-style: preserve-3d;
+  transition: all 0.7s;
+  &__front,
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    backface-visibility: hidden;
+    border-radius: inherit;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+  }
+  &__back {
+    cursor: default;
+    transform: rotateY(180deg);
+  }
+  .card__desc {
+    bottom: -60px;
+  }
+  &.disable {
+    pointer-events: none;
+    opacity: 0.5;
+    &:before {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    }
+  }
+}
+.word-card.flipped {
+  transform: rotateY(180deg);
+  .card__rotate {
+    display: none;
+  }
+}
+.rating {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  height: 40px;
+  width: 100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  .star {
+    display: block;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    background-image: url('/public/icons/star-error.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &_error {
+      background-image: url('/public/icons/star-error.svg');
+    }
+    &_success {
+      background-image: url('/public/icons/star-success.svg');
+    }
+  }
+}
+
+
+
+.btn_start {
+  display: none;
+  position: absolute;
+  bottom: -70px;
+  width: 260px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 60px;
+  color: #fff;
+  text-shadow: -1px 0 1px #069235, 1px 0px 1px #069235, 0px 1px 1px #069235, 0px -1px 1px #069235;
+  background: linear-gradient(217deg, rgba(255, 251, 5), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(1, 141, 1), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgb(248, 132, 0), rgba(0, 0, 255, 0) 70.71%);
+  &:hover {
+    color: yellow;
+  }
+  &.active {
+    font-size: 0;
+    text-indent: 999;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background: url('/public/icons/repeat.svg') center no-repeat,
+      linear-gradient(217deg, rgba(255, 251, 5), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(1, 141, 1), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgb(248, 132, 0), rgba(0, 0, 255, 0) 70.71%);
+  }
+}
+
+.play-mode {
+  .word-card__front {
+    height: 100%;
+    border-radius: 20px;
+  }
+  .card__desc {
+    display: none;
+  }
+  .card__rotate {
+    display: none;
+  }
+  .btn_start {
+    display: block;
+  }
+  .rating {
+    display: flex;
+  }
+}
